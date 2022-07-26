@@ -1,0 +1,19 @@
+html{
+	color:white;
+	background-image: url("frontend.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	/*background: linear-gradient(grey,black);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;*/
+}
+h1{
+	background: linear-gradient(red,orange,yellow);
+}
+#mytext{
+	background: linear-gradient(to right, gray,black);
+}

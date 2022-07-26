@@ -1,0 +1,13 @@
+#img1{
+	width:800px;
+	height:500px;
+}
+#img1:hover{
+	
+	animation: scale;
+	animation-duration:3s;
+	animation-iteration-count: 1;
+}
+@keyframes scale{
+	100%{transform:scale(5,5);}
+}
