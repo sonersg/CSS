@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #242424;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 450px;
+    padding: 5em;
+}
+
+.container i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+
+.container i:nth-child(1) {
+    border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+    animation: animate 12s linear infinite;
+}
+.container i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 8s linear infinite;
+}
+.container i:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 20s linear infinite;
+}
+
+.container:hover i,
+.container:focus i {
+    border: 5px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    min-width: 220px;
+    color: white;
+    transition: 0.7s;
+}
+.form:hover,
+.form:focus {
+    transform: scale(1.05);
+}
+
+.form input {
+    font-size: 1.3rem;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 0.4em;
+    text-align: center;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+}
+
+.form input[type="submit"] {
+    background: #0078ff;
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    /* -webkit-transition: all 0.9s ease-in;
+    -moz-transition: all 0.9s ease-in;
+    -o-transition: all 0.9s ease-in; */
+    transition: all 0.5s ease-in-out;
+}
+.form input[type="submit"]:hover,
+.form input[type="submit"]:focus {
+    background: linear-gradient(45deg, #fff172, #ff357a);
+}
+
+.form input::placeholder {
+    color: #fff;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
