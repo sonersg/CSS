@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #242424;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .box {
+        height: 400px;
+        width: 300px;
+        background-color: greenyellow;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+
+        resize: both;
+      }
+
+      .box div {
+        height: 100%;
+        width: 100%;
+
+        /* Center an element with two lines  */
+        display: grid;
+        place-content: center;
+
+        font-size: 5rem;
+        font-weight: bold;
+
+        /* Vertical text  */
+        writing-mode: vertical-rl;
+
+        scroll-snap-align: center;
+      }
+      .box div:nth-child(odd) {
+        background-color: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+      <div>five</div>
+      <div>six</div>
+      <div>seven</div>
+      <div>eight</div>
+      <div>nine</div>
+      <div>ten</div>
+      <div>eleven</div>
+      <div>twelve</div>
+    </div>
+  </body>
+</html>
